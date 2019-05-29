@@ -12,7 +12,7 @@
   ],
   "pluginsConfig": {
     "bsz": {
-      "copyright": "By <a href=\"https://i.wangding.in\">王顶</a>"
+      "copyright": "© 2018&nbsp;-&nbsp;<span class=\"bsz-this-year\"></span>&nbsp;<a href=\"https://i.wangding.in\">王顶</a>.&nbsp;All rights reserved."
     }
   }
 }

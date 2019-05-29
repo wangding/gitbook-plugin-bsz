@@ -8,6 +8,7 @@ module.exports = function(book, page) {
 
   var wrapIfMarkdown = function(input) {
     return input;
+
     if (!config.markdown) {
       return input;
     } else {
@@ -18,20 +19,17 @@ module.exports = function(book, page) {
   // Gitbook Markdown rendering is asynchronous.
   return Promise.all([wrapIfMarkdown(config.copyright)]).then(function(labels) {
     var copyright = labels[0];
-    page.content +=
-      '\n\n' +
-      [
-        '<footer class="page-footer-ex">',
-        '<span class="page-footer-ex-copyright">',
-        copyright,
-        '</span>',
-        '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;',
-        '<span class="page-footer-ex-footer-update">',
-        '<span id="busuanzi_container_site_uv">本站总访问量&nbsp;<span id="busuanzi_value_site_uv"></span>&nbsp;次</span>',
-        '</span>',
-        '</footer>',
-        '<script async="" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>'
-      ].join(' ');
+    page.content += ''
+        + '<footer class="page-footer">'
+          + '<span class="page-footer-copyright">'
+           +  copyright
+          + '</span>'
+          + '<span class="page-footer-footer-update">'
+            + '<span id="busuanzi_container_site_uv">本站访客人数&nbsp;<span id="busuanzi_value_site_uv"></span>&nbsp;人次</span>'
+          + '</span>'
+        + '</footer>'
+        + '<script>document.getElementsByClassName("bsz-this-year")[0].innerHTML = new Date().getFullYear(); </script>'
+        + '<script async="" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>';
 
     return page;
   });
