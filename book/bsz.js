@@ -19,7 +19,7 @@ module.exports = function(book, page) {
   // Gitbook Markdown rendering is asynchronous.
   return Promise.all([wrapIfMarkdown(config.copyright)]).then(function(labels) {
     var copyright = labels[0];
-    page.content += ''
+    page.content += '\n\n\n'
         + '<footer class="page-footer">'
           + '<span class="page-footer-copyright">'
            +  copyright

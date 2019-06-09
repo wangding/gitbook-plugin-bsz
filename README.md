@@ -13,7 +13,7 @@ Add it to your `book.json`:
   "plugins": ["bsz"],
   "pluginsConfig": {
     "bsz": {
-      "copyright": "By <em>AUTHOR NAME</em>",
+      "copyright": "By <em>wangding</em>",
       "markdown": false
     }
   }
@@ -27,7 +27,7 @@ or
   "plugins": ["bsz"],
   "pluginsConfig": {
     "bsz": {
-      "copyright": "[mrcode](https://github.com/caimaoy)",
+      "copyright": "[wangding](https://github.com/wangding)",
       "markdown": true
     }
   }
