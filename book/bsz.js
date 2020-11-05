@@ -29,7 +29,7 @@ module.exports = function(book, page) {
           + '</span>'
         + '</footer>'
         + '<script>document.getElementsByClassName("bsz-this-year")[0].innerHTML = new Date().getFullYear(); </script>'
-        + '<script async="" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>';
+        + '<script async="" src="//cdn.staticfile.org/busuanzi/2.3.0/bsz.pure.mini.js"></script>';
 
     return page;
   });
